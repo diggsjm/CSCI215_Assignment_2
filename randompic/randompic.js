@@ -11,12 +11,14 @@ then put script tag
  */
 //1.generate a random number btw 0,4
 var randomNum;
-randomNum = (Math.random() * 4);
+randomNum = (Math.floor(Math.random() * 5));
+console.log(randomNum);
+
 
 //2.load an array of pic locations
 var imageArray;
 imageArray = ["budapest.png", "amsterdam.png", "florence.png", "greece.png", "tulips.png"];
 
-
-
+var picDiv = document.getElementById("randomPic");
+picDiv.setAttribute('src', imageArray[randomNum]);
 
